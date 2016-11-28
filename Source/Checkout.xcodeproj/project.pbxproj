@@ -12,6 +12,7 @@
 		34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EE1DE761D700EC26FB /* Assets.xcassets */; };
 		34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191F01DE761D700EC26FB /* LaunchScreen.storyboard */; };
 		34A191FD1DE761D700EC26FB /* CheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191FC1DE761D700EC26FB /* CheckoutTests.swift */; };
+		34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD41DECF5740025CFAA /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		34A191F81DE761D700EC26FB /* CheckoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191FC1DE761D700EC26FB /* CheckoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTests.swift; sourceTree = "<group>"; };
 		34A191FE1DE761D700EC26FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34FCCBD41DECF5740025CFAA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				34A1920A1DE7626500EC26FB /* Model */,
 				34A192091DE7625E00EC26FB /* Views */,
 				34A192081DE7625500EC26FB /* Controller */,
+				34FCCBD61DECF6ED0025CFAA /* Util */,
 				34A1920C1DE762AA00EC26FB /* Resources */,
 				34A192071DE7624700EC26FB /* Supporting Files */,
 			);
@@ -106,6 +109,7 @@
 		34A192081DE7625500EC26FB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				34FCCBD41DECF5740025CFAA /* LoginController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -131,6 +135,13 @@
 				34A191EE1DE761D700EC26FB /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		34FCCBD61DECF6ED0025CFAA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */,
 				34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
