@@ -13,6 +13,7 @@
 		34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191F01DE761D700EC26FB /* LaunchScreen.storyboard */; };
 		34A191FD1DE761D700EC26FB /* CheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191FC1DE761D700EC26FB /* CheckoutTests.swift */; };
 		34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD41DECF5740025CFAA /* LoginController.swift */; };
+		34FCCBD81DECF7690025CFAA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD71DECF7690025CFAA /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		34A191FC1DE761D700EC26FB /* CheckoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTests.swift; sourceTree = "<group>"; };
 		34A191FE1DE761D700EC26FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34FCCBD41DECF5740025CFAA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		34FCCBD71DECF7690025CFAA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		34FCCBD61DECF6ED0025CFAA /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				34FCCBD71DECF7690025CFAA /* Color.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */,
 				34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */,
+				34FCCBD81DECF7690025CFAA /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
