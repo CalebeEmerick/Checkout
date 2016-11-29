@@ -12,6 +12,7 @@
 		34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EE1DE761D700EC26FB /* Assets.xcassets */; };
 		34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191F01DE761D700EC26FB /* LaunchScreen.storyboard */; };
 		34A191FD1DE761D700EC26FB /* CheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191FC1DE761D700EC26FB /* CheckoutTests.swift */; };
+		34D6BE071DED13AF00C1E487 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6BE061DED13AF00C1E487 /* View.swift */; };
 		34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD41DECF5740025CFAA /* LoginController.swift */; };
 		34FCCBD81DECF7690025CFAA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD71DECF7690025CFAA /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		34A191F81DE761D700EC26FB /* CheckoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191FC1DE761D700EC26FB /* CheckoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTests.swift; sourceTree = "<group>"; };
 		34A191FE1DE761D700EC26FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D6BE061DED13AF00C1E487 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		34FCCBD41DECF5740025CFAA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		34FCCBD71DECF7690025CFAA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				34FCCBD71DECF7690025CFAA /* Color.swift */,
+				34D6BE061DED13AF00C1E487 /* View.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D6BE071DED13AF00C1E487 /* View.swift in Sources */,
 				34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */,
 				34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */,
 				34FCCBD81DECF7690025CFAA /* Color.swift in Sources */,
