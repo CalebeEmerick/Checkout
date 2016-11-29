@@ -8,14 +8,21 @@
 
 import UIKit
 
-// MARK: - LoginController -
+// MARK: - Variables & Outlets -
 
 final class LoginController : UITableViewController {
 
-    @IBOutlet fileprivate weak var userTextField: UITextField! { didSet { setTextFieldStyle(for: userTextField, with: "Usuário") } }
-    @IBOutlet fileprivate weak var passwordTextField: UITextField! { didSet { setTextFieldStyle(for: passwordTextField, with: "Senha") } }
+    @IBOutlet fileprivate weak var userTextField: UITextField!
+    @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet fileprivate weak var enterButtonWidth: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var enterButton: UIButton!
+    @IBOutlet fileprivate weak var activity: UIActivityIndicatorView!
     
-    @IBAction private func enterAction(_ sender: UIButton) { }
+    @IBAction private func usernameDidChange(_ sender: UITextField) { shouldEnableEnterButton() }
+    @IBAction private func passwordDidChange(_ sender: UITextField) { shouldEnableEnterButton() }
+    @IBAction private func enterAction(_ sender: UIButton) { doLogin() }
+    
+    fileprivate lazy var presenter: LoginPresenter = LoginPresenter(loginView: self)
 }
 
 // MARK: - Life Cycle -
@@ -25,7 +32,8 @@ extension LoginController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeBackgroundGradient()
+        setBackgroundGradient()
+        setTextFieldStyle()
     }
 }
 
@@ -33,27 +41,24 @@ extension LoginController {
 
 extension LoginController {
     
-    fileprivate func setTextFieldStyle(for textField: UITextField, with placeholder: String) {
+    fileprivate func doLogin() {
+        
+        guard
+            let username = userTextField.text,
+            let password = passwordTextField.text
+        else { return }
+        
+        presenter.doLogin(username: username, password: password)
+    }
 
-        View.setPlaceholderColor(for: textField, with: placeholder, color: Color(hexString: "#fff", alpha: 0.5).color)
+    fileprivate func shouldEnableEnterButton() {
+
+        presenter.shouldEnable(button: enterButton)
     }
     
-    fileprivate func makeBackgroundGradient() {
+    fileprivate func layoutView() {
         
-        let gradient = CAGradientLayer()
-        let colorsArray: [CGColor] = [
-            
-            Color(hexString: "#00adef", alpha: 0.9).cgColor,
-            Color(hexString: "#00adef", alpha: 0.7).cgColor,
-            Color(hexString: "#00adef", alpha: 0.5).cgColor
-        ]
-        
-        gradient.colors = colorsArray
-        gradient.locations = [0.0, 0.75, 1]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 1)
-        gradient.frame = view.frame
-        view.layer.insertSublayer(gradient, at: 0)
+        self.view.layoutIfNeeded()
     }
 }
 
@@ -65,13 +70,67 @@ extension LoginController : UITextFieldDelegate {
         
         if textField == userTextField {
             
-            passwordTextField.becomeFirstResponder()
+            presenter.makePasswordTextFieldFirstResponder(passwordTextField)
         }
         else {
             
-            textField.endEditing(true)
+            doLogin()
         }
         
         return true
+    }
+}
+
+// MARK: - LoginView Protocol -
+
+extension LoginController : LoginView {
+    
+    func setBackgroundGradient() {
+        
+        presenter.makeBackgroundGradient(for: self.view)
+    }
+    
+    func setTextFieldStyle() {
+        
+        presenter.tintPlaceholder(for: userTextField, with: "Usuário")
+        presenter.tintPlaceholder(for: passwordTextField, with: "Senha")
+    }
+    
+    func startAnimating() {
+        
+        enterButtonWidth.constant = 0
+        
+        UIView.animate(withDuration: 0.3, animations: {
+        
+            self.layoutView()
+            
+        }, completion: { completed in
+        
+            self.activity.startAnimating()
+        })
+    }
+    
+    func stopAnimating() {
+        
+        activity.stopAnimating()
+        enterButtonWidth.constant = 200
+        
+        UIView.animate(withDuration: 0.3) { self.layoutView() }
+    }
+    
+    func isFieldsEmpty() -> Bool {
+        
+        return !userTextField.text!.isEmpty && !passwordTextField.text!.isEmpty
+    }
+    
+    func toggleLockFields() {
+        
+        userTextField.isEnabled = !userTextField.isEnabled
+        passwordTextField.isEnabled = !passwordTextField.isEnabled
+    }
+    
+    func hideKeyboard() {
+        
+        self.view.endEditing(true)
     }
 }

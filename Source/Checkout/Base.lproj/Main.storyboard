@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="287" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7qp-th-1Ek" id="jas-of-Niv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-ip-VFI">
@@ -87,6 +87,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                             <connections>
+                                                                <action selector="usernameDidChange:" destination="giz-gD-nc6" eventType="editingChanged" id="TK7-jz-0BA"/>
                                                                 <outlet property="delegate" destination="giz-gD-nc6" id="0FH-0b-fnm"/>
                                                             </connections>
                                                         </textField>
@@ -106,7 +107,7 @@
                                         <rect key="frame" x="0.0" y="327" width="320" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gaf-oo-hwV" id="pN6-5v-4l6">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-qu-vRM">
@@ -129,6 +130,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                             <connections>
+                                                                <action selector="passwordDidChange:" destination="giz-gD-nc6" eventType="editingChanged" id="agX-Jt-DWh"/>
                                                                 <outlet property="delegate" destination="giz-gD-nc6" id="zl4-K7-OKU"/>
                                                             </connections>
                                                         </textField>
@@ -148,10 +150,10 @@
                                         <rect key="frame" x="0.0" y="374" width="320" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="222-sa-V4y" id="DuX-CE-xtO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="103.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-gz-j3r">
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-gz-j3r">
                                                     <rect key="frame" x="60" y="30" width="200" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="LFT-RO-5xr"/>
@@ -164,10 +166,16 @@
                                                         <action selector="enterAction:" destination="giz-gD-nc6" eventType="touchUpInside" id="MTR-MQ-5RV"/>
                                                     </connections>
                                                 </button>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YGc-Sr-1lf">
+                                                    <rect key="frame" x="150" y="40" width="20" height="20"/>
+                                                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Qlg-gz-j3r" firstAttribute="top" secondItem="DuX-CE-xtO" secondAttribute="top" constant="30" id="Zlc-XL-nSj"/>
+                                                <constraint firstItem="YGc-Sr-1lf" firstAttribute="centerX" secondItem="Qlg-gz-j3r" secondAttribute="centerX" id="lWu-tG-rmh"/>
                                                 <constraint firstItem="Qlg-gz-j3r" firstAttribute="centerX" secondItem="DuX-CE-xtO" secondAttribute="centerX" id="qav-ah-1aY"/>
+                                                <constraint firstItem="YGc-Sr-1lf" firstAttribute="centerY" secondItem="Qlg-gz-j3r" secondAttribute="centerY" id="rsc-io-sCV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -181,6 +189,9 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="activity" destination="YGc-Sr-1lf" id="p8e-xB-U3I"/>
+                        <outlet property="enterButton" destination="Qlg-gz-j3r" id="sof-DY-mWU"/>
+                        <outlet property="enterButtonWidth" destination="Qv5-H4-Qlw" id="5by-bg-kyW"/>
                         <outlet property="passwordTextField" destination="yOX-9m-BNf" id="QJb-P5-ZDM"/>
                         <outlet property="userTextField" destination="oZ1-WQ-2sF" id="ndy-L6-OII"/>
                     </connections>
