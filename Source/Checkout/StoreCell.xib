@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11760" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoreCell" customModule="Checkout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store2" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-E8-968" userLabel="background">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZ2-jP-8LJ" userLabel="blur">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Edg-H2-2OT">
+                            <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-lM-lcx">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="el3-On-NUH">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                    <vibrancyEffect>
+                                        <blurEffect style="light"/>
+                                    </vibrancyEffect>
+                                </visualEffectView>
+                            </subviews>
+                        </view>
+                        <blurEffect style="extraLight"/>
+                    </visualEffectView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store1" translatesAutoresizingMaskIntoConstraints="NO" id="y85-xV-xuB" userLabel="picture">
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="lZ2-jP-8LJ" firstAttribute="top" secondItem="t4f-E8-968" secondAttribute="top" id="4zl-F8-lXo"/>
+                <constraint firstItem="lZ2-jP-8LJ" firstAttribute="bottom" secondItem="t4f-E8-968" secondAttribute="bottom" id="5hg-Ce-Imf"/>
+                <constraint firstItem="t4f-E8-968" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6B7-V8-B0Y"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="bottom" secondItem="lZ2-jP-8LJ" secondAttribute="bottom" id="Cjl-vP-N4S"/>
+                <constraint firstItem="lZ2-jP-8LJ" firstAttribute="trailing" secondItem="t4f-E8-968" secondAttribute="trailing" id="FYC-sY-Lrk"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="top" secondItem="lZ2-jP-8LJ" secondAttribute="top" id="H76-DL-a3I"/>
+                <constraint firstItem="t4f-E8-968" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J4c-s0-yPh"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="leading" secondItem="lZ2-jP-8LJ" secondAttribute="leading" id="JaC-tM-7we"/>
+                <constraint firstItem="lZ2-jP-8LJ" firstAttribute="leading" secondItem="t4f-E8-968" secondAttribute="leading" id="gzQ-0t-d04"/>
+                <constraint firstAttribute="trailing" secondItem="t4f-E8-968" secondAttribute="trailing" id="i7L-gx-xPp"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="trailing" secondItem="lZ2-jP-8LJ" secondAttribute="trailing" id="qZB-V0-lxF"/>
+                <constraint firstAttribute="bottom" secondItem="t4f-E8-968" secondAttribute="bottom" id="vQG-aA-fxu"/>
+            </constraints>
+            <size key="customSize" width="175" height="168"/>
+            <connections>
+                <outlet property="picture" destination="y85-xV-xuB" id="29g-RH-YGM"/>
+            </connections>
+            <point key="canvasLocation" x="96.5" y="113"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="store1" width="270" height="270"/>
+        <image name="store2" width="270" height="191"/>
+    </resources>
+</document>

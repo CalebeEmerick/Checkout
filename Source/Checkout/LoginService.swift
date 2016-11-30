@@ -8,21 +8,21 @@
 
 import Foundation
 
-enum LoginStatus { case success(User), failure(String) }
-
-protocol LoginServiceProtocol {
+protocol LoginServiceProtocol : ServiceProtocol {
     
-    func doLogin(username: String, password: String, completion: @escaping (LoginStatus) -> Void)
+    associatedtype T
+    
+    func doLogin(username: String, password: String, completion: @escaping (Result<T>) -> Void)
 }
 
 struct LoginService : LoginServiceProtocol {
-    
-    func doLogin(username: String, password: String, completion: @escaping (LoginStatus) -> Void) {
+
+    func doLogin(username: String, password: String, completion: @escaping (Result<User>) -> Void) {
         
-        let headers = makeHeaders()
+        let url = "\(baseURL)/users/accesstokens"
         let parameters = makeParametersFrom(username: username, password: password)
         
-        Just.post("https://private-anon-b1ce5f19aa-mundipaggportal.apiary-mock.com/users/accesstokens", params: parameters, headers: headers) { result in
+        Just.post(url, params: parameters, headers: defaultJSONHeader) { result in
             
             guard let code = result.statusCode else {
                 return completion(.failure(Message.generalError)) }
@@ -37,7 +37,7 @@ struct LoginService : LoginServiceProtocol {
                 
             case 200 ..< 300:
                 guard let user = self.makeUser(from: json) else {
-                    return completion(LoginStatus.failure(Message.generalError)) }
+                    return completion(Result.failure(Message.generalError)) }
                 completion(.success(user))
                 
             default:
@@ -67,15 +67,6 @@ struct LoginService : LoginServiceProtocol {
         }
         
         return message
-    }
-    
-    private func makeHeaders() -> [String: String] {
-        
-        return [
-            
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        ]
     }
     
     private func makeParametersFrom(username: String, password: String) -> [String: Any] {

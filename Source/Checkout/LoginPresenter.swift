@@ -10,7 +10,7 @@ import UIKit
 
 struct LoginPresenter {
     
-    private let service: LoginServiceProtocol = LoginService()
+    private let service = LoginService()
     private unowned var loginView: LoginView
     
     init(loginView: LoginView) {
