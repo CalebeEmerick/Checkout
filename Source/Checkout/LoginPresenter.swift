@@ -31,11 +31,10 @@ struct LoginPresenter {
                 switch result {
                     
                 case let .success(user):
-                    self.stopLoading()
+                    self.register(user: user)
                     
                 case let .failure(error):
-                    self.stopLoading()
-                    self.loginView.showErrorAlert(error)
+                    self.showMessage(with: error)
                 }
             }
         }
@@ -81,6 +80,18 @@ struct LoginPresenter {
         
         alert.addAction(okAction)
         controller.present(alert, animated: true, completion: nil)
+    }
+    
+    private func register(user: User) {
+        
+        LoginManager.sharedInstance.register(user: user)
+        stopLoading()
+    }
+    
+    private func showMessage(with error: String) {
+        
+        self.stopLoading()
+        self.loginView.showErrorAlert(error)
     }
     
     private func stopLoading() {

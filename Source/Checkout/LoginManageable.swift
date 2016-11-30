@@ -1,5 +1,5 @@
 //
-//  UserSingleton.swift
+//  LoginManageable.swift
 //  Checkout
 //
 //  Created by Calebe Emerick on 30/11/16.
