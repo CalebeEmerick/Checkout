@@ -85,6 +85,7 @@ struct LoginPresenter {
     private func register(user: User) {
         
         LoginManager.sharedInstance.register(user: user)
+        Router.enterApplication()
         stopLoading()
     }
     

@@ -37,6 +37,11 @@
 		34FA95AE1DEF6A50007F9943 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95AD1DEF6A50007F9943 /* StoreService.swift */; };
 		34FA95B01DEF6A7C007F9943 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95AF1DEF6A7C007F9943 /* Result.swift */; };
 		34FA95B21DEF6E83007F9943 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95B11DEF6E83007F9943 /* ServiceProtocol.swift */; };
+		34FA95B51DEF72E7007F9943 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95B41DEF72E7007F9943 /* Router.swift */; };
+		34FA95B81DEF733E007F9943 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95B71DEF733E007F9943 /* Constants.swift */; };
+		34FA95BA1DEF73FE007F9943 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95B91DEF73FE007F9943 /* Storyboard.swift */; };
+		34FA95BC1DEF769F007F9943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95BB1DEF769F007F9943 /* ViewController.swift */; };
+		34FA95BE1DEF7862007F9943 /* ControllerStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95BD1DEF7862007F9943 /* ControllerStack.swift */; };
 		34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD41DECF5740025CFAA /* LoginController.swift */; };
 		34FCCBD81DECF7690025CFAA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FCCBD71DECF7690025CFAA /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +91,11 @@
 		34FA95AD1DEF6A50007F9943 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
 		34FA95AF1DEF6A7C007F9943 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34FA95B11DEF6E83007F9943 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		34FA95B41DEF72E7007F9943 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		34FA95B71DEF733E007F9943 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		34FA95B91DEF73FE007F9943 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		34FA95BB1DEF769F007F9943 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34FA95BD1DEF7862007F9943 /* ControllerStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerStack.swift; sourceTree = "<group>"; };
 		34FCCBD41DECF5740025CFAA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		34FCCBD71DECF7690025CFAA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +145,8 @@
 				34A192091DE7625E00EC26FB /* Storyboard */,
 				34A192081DE7625500EC26FB /* View */,
 				34D6BE0B1DEDBAE300C1E487 /* Presenter */,
+				34FA95B61DEF731F007F9943 /* Manager */,
+				34FA95B31DEF72D7007F9943 /* Router */,
 				34FCCBD61DECF6ED0025CFAA /* Util */,
 				34AAEE701DEF4BE500DD5026 /* Snippets */,
 				34D6BE121DEDCF4E00C1E487 /* Library */,
@@ -202,6 +214,7 @@
 			children = (
 				34FCCBD71DECF7690025CFAA /* Color.swift */,
 				34D6BE061DED13AF00C1E487 /* View.swift */,
+				34FA95BB1DEF769F007F9943 /* ViewController.swift */,
 			);
 			name = Snippets;
 			sourceTree = "<group>";
@@ -283,13 +296,31 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		34FA95B31DEF72D7007F9943 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				34FA95B41DEF72E7007F9943 /* Router.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		34FA95B61DEF731F007F9943 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		34FCCBD61DECF6ED0025CFAA /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				34FA95AF1DEF6A7C007F9943 /* Result.swift */,
-				34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */,
+				34FA95BD1DEF7862007F9943 /* ControllerStack.swift */,
 				34D6BE151DEDD21400C1E487 /* JSONDecodable.swift */,
 				34FA95B11DEF6E83007F9943 /* ServiceProtocol.swift */,
+				34FA95B71DEF733E007F9943 /* Constants.swift */,
+				34FA95B91DEF73FE007F9943 /* Storyboard.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -405,9 +436,12 @@
 				34D6BE0E1DEDCDCB00C1E487 /* LoginService.swift in Sources */,
 				34AAEE801DEF5EC900DD5026 /* Image.swift in Sources */,
 				34FA95AE1DEF6A50007F9943 /* StoreService.swift in Sources */,
+				34FA95B81DEF733E007F9943 /* Constants.swift in Sources */,
 				34AAEE7E1DEF5C7900DD5026 /* Store.swift in Sources */,
 				34FCCBD51DECF5740025CFAA /* LoginController.swift in Sources */,
 				34D6BE1A1DEE081E00C1E487 /* LoginPresenter.swift in Sources */,
+				34FA95BC1DEF769F007F9943 /* ViewController.swift in Sources */,
+				34FA95BE1DEF7862007F9943 /* ControllerStack.swift in Sources */,
 				34D6BE141DEDCF8200C1E487 /* Just.swift in Sources */,
 				34AAEE821DEF63B700DD5026 /* StoreDataSource.swift in Sources */,
 				34AAEE751DEF53DF00DD5026 /* StoresController.swift in Sources */,
@@ -415,6 +449,7 @@
 				34AAEE841DEF63C200DD5026 /* StoreDelegate.swift in Sources */,
 				34AAEE8D1DEF644300DD5026 /* TableViewReusable.swift in Sources */,
 				34FA95B01DEF6A7C007F9943 /* Result.swift in Sources */,
+				34FA95BA1DEF73FE007F9943 /* Storyboard.swift in Sources */,
 				34FA95B21DEF6E83007F9943 /* ServiceProtocol.swift in Sources */,
 				34AAEE8C1DEF644300DD5026 /* Reusable.swift in Sources */,
 				34AAEE771DEF547900DD5026 /* StoresView.swift in Sources */,
@@ -424,6 +459,7 @@
 				34D6BE181DEDEE7B00C1E487 /* Message.swift in Sources */,
 				34AAEE8B1DEF644300DD5026 /* NibCreatable.swift in Sources */,
 				34AAEE8F1DEF661500DD5026 /* StorePresenter.swift in Sources */,
+				34FA95B51DEF72E7007F9943 /* Router.swift in Sources */,
 				34AAEE8A1DEF644300DD5026 /* CollectionViewReusable.swift in Sources */,
 				34FCCBD81DECF7690025CFAA /* Color.swift in Sources */,
 				34D6BE111DEDCE5300C1E487 /* User.swift in Sources */,
