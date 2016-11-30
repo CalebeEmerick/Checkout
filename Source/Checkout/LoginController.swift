@@ -99,15 +99,9 @@ extension LoginController : LoginView {
     func startAnimating() {
         
         enterButtonWidth.constant = 0
+        activity.startAnimating()
         
-        UIView.animate(withDuration: 0.3, animations: {
-        
-            self.layoutView()
-            
-        }, completion: { completed in
-        
-            self.activity.startAnimating()
-        })
+        UIView.animate(withDuration: 0.3) { self.layoutView() }
     }
     
     func stopAnimating() {
@@ -132,5 +126,10 @@ extension LoginController : LoginView {
     func hideKeyboard() {
         
         self.view.endEditing(true)
+    }
+    
+    func showErrorAlert(_ error: String) {
+        
+        presenter.showAlert(for: self, with: error)
     }
 }

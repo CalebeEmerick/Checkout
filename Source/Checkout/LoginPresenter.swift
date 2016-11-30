@@ -31,12 +31,11 @@ struct LoginPresenter {
                 switch result {
                     
                 case let .success(user):
-                    self.loginView.stopAnimating()
-                    self.loginView.toggleLockFields()
+                    self.stopLoading()
                     
                 case let .failure(error):
-                    self.loginView.stopAnimating()
-                    self.loginView.toggleLockFields()
+                    self.stopLoading()
+                    self.loginView.showErrorAlert(error)
                 }
             }
         }
@@ -73,5 +72,20 @@ struct LoginPresenter {
     func shouldEnable(button: UIButton) {
         
         button.isEnabled = loginView.isFieldsEmpty()
+    }
+    
+    func showAlert(for controller: UIViewController, with message: String) {
+        
+        let alert = UIAlertController(title: "Ops!", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        controller.present(alert, animated: true, completion: nil)
+    }
+    
+    private func stopLoading() {
+        
+        self.loginView.stopAnimating()
+        self.loginView.toggleLockFields()
     }
 }

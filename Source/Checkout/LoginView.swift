@@ -17,4 +17,5 @@ protocol LoginView : class {
     func toggleLockFields()
     func isFieldsEmpty() -> Bool
     func hideKeyboard()
+    func showErrorAlert(_ error: String)
 }
