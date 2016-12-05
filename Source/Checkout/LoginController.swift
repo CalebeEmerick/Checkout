@@ -33,6 +33,7 @@ extension LoginController {
         super.viewDidLoad()
         
         presenter = LoginPresenter(loginView: self)
+        makeBackgroundGradient(for: self.view)
         setBackgroundGradient()
         setTextFieldStyle()
     }
@@ -41,6 +42,24 @@ extension LoginController {
 // MARK: - Methods -
 
 extension LoginController {
+    
+    func makeBackgroundGradient(for view: UIView) {
+
+        let gradient = CAGradientLayer()
+        let colorsArray: [CGColor] = [
+
+            Color(hexString: "#00adef", alpha: 0.9).cgColor,
+            Color(hexString: "#00adef", alpha: 0.7).cgColor,
+            Color(hexString: "#00adef", alpha: 0.5).cgColor
+        ]
+
+        gradient.colors = colorsArray
+        gradient.locations = [0.0, 0.75, 1]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        gradient.frame = view.frame
+        view.layer.insertSublayer(gradient, at: 0)
+    }
     
     fileprivate func doLogin() {
         
@@ -54,7 +73,7 @@ extension LoginController {
 
     fileprivate func shouldEnableEnterButton() {
 
-        presenter?.shouldEnable(button: enterButton)
+//        presenter?.shouldEnable(button: enterButton)
     }
     
     fileprivate func layoutView() {
@@ -71,7 +90,7 @@ extension LoginController : UITextFieldDelegate {
         
         if textField == userTextField {
             
-            presenter?.makePasswordTextFieldFirstResponder(passwordTextField)
+//            presenter?.makePasswordTextFieldFirstResponder(passwordTextField)
         }
         else {
             
@@ -88,13 +107,13 @@ extension LoginController : LoginView {
     
     func setBackgroundGradient() {
         
-        presenter?.makeBackgroundGradient(for: self.view)
+//        presenter?.makeBackgroundGradient(for: self.view)
     }
     
     func setTextFieldStyle() {
         
-        presenter?.tintPlaceholder(for: userTextField, with: "Usuário")
-        presenter?.tintPlaceholder(for: passwordTextField, with: "Senha")
+//        presenter?.tintPlaceholder(for: userTextField, with: "Usuário")
+//        presenter?.tintPlaceholder(for: passwordTextField, with: "Senha")
     }
     
     func startAnimating() {
@@ -131,6 +150,6 @@ extension LoginController : LoginView {
     
     func showErrorAlert(_ error: String) {
         
-        presenter?.showAlert(for: self, with: error)
+//        presenter?.showAlert(for: self, with: error)
     }
 }
