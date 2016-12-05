@@ -22,7 +22,7 @@ final class LoginController : UITableViewController {
     @IBAction private func passwordDidChange(_ sender: UITextField) { shouldEnableEnterButton() }
     @IBAction private func enterAction(_ sender: UIButton) { doLogin() }
     
-    fileprivate lazy var presenter: LoginPresenter = LoginPresenter(loginView: self)
+    fileprivate var presenter: LoginPresenter?
 }
 
 // MARK: - Life Cycle -
@@ -32,6 +32,7 @@ extension LoginController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter = LoginPresenter(loginView: self)
         setBackgroundGradient()
         setTextFieldStyle()
     }
@@ -48,12 +49,12 @@ extension LoginController {
             let password = passwordTextField.text
         else { return }
         
-        presenter.doLogin(username: username, password: password)
+        presenter?.doLogin(username: username, password: password)
     }
 
     fileprivate func shouldEnableEnterButton() {
 
-        presenter.shouldEnable(button: enterButton)
+        presenter?.shouldEnable(button: enterButton)
     }
     
     fileprivate func layoutView() {
@@ -70,7 +71,7 @@ extension LoginController : UITextFieldDelegate {
         
         if textField == userTextField {
             
-            presenter.makePasswordTextFieldFirstResponder(passwordTextField)
+            presenter?.makePasswordTextFieldFirstResponder(passwordTextField)
         }
         else {
             
@@ -87,13 +88,13 @@ extension LoginController : LoginView {
     
     func setBackgroundGradient() {
         
-        presenter.makeBackgroundGradient(for: self.view)
+        presenter?.makeBackgroundGradient(for: self.view)
     }
     
     func setTextFieldStyle() {
         
-        presenter.tintPlaceholder(for: userTextField, with: "Usuário")
-        presenter.tintPlaceholder(for: passwordTextField, with: "Senha")
+        presenter?.tintPlaceholder(for: userTextField, with: "Usuário")
+        presenter?.tintPlaceholder(for: passwordTextField, with: "Senha")
     }
     
     func startAnimating() {
@@ -130,6 +131,6 @@ extension LoginController : LoginView {
     
     func showErrorAlert(_ error: String) {
         
-        presenter.showAlert(for: self, with: error)
+        presenter?.showAlert(for: self, with: error)
     }
 }

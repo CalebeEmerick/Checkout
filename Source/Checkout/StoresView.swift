@@ -10,5 +10,7 @@ import UIKit
 
 protocol StoresView : class {
     
-    func setupCollectionView()
+    func startAnimating()
+    func stopAnimating()
+    func showContainer(with stores: [Store])
 }

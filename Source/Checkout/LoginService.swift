@@ -53,22 +53,6 @@ struct LoginService : LoginServiceProtocol {
         return user
     }
     
-    private func getErrorMessage(from json: JSON) -> String {
-        
-        guard let errors = json["errors"] as? [[String: Any]] else { return Message.generalError }
-        
-        var message: String = ""
-        
-        for error in errors {
-            
-            guard let errorMessage = error["message"] as? String else { return Message.generalError }
-            
-            message += "\(errorMessage) "
-        }
-        
-        return message
-    }
-    
     private func makeParametersFrom(username: String, password: String) -> [String: Any] {
         
         return [

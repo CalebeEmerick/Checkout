@@ -25,7 +25,43 @@ struct StoreService : StoreServiceProtocol {
         
         Just.get(url) { result in
             
-            print(result.json)
+            guard let code = result.statusCode else {
+                return completion(.failure(Message.generalError)) }
+            
+            guard let result = result.json else {
+                return completion(.failure(Message.generalError)) }
+            
+            guard let json = result as? [String: Any] else {
+                return completion(.failure(Message.generalError)) }
+            
+            switch code {
+                
+            case 200 ..< 300:
+                let stores = self.makeStores(from: json)
+                completion(Result.success(stores))
+                
+            default:
+                completion(.failure(self.getErrorMessage(from: json)))
+            }
         }
+    }
+    
+    private func makeStores(from json: JSON) -> [Store] {
+        
+        var stores: [Store] = []
+        
+        guard let items = json["items"] as? [[String: Any]] else { return stores }
+        
+        for item in items {
+            
+            guard let store = Store(json: item) else { return stores }
+            
+            stores.append(store)
+            stores.append(store)
+            stores.append(store)
+            stores.append(store)
+        }
+        
+        return stores
     }
 }

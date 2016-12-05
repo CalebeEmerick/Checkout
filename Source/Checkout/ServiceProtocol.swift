@@ -27,4 +27,20 @@ extension ServiceProtocol {
             "Accept": "application/json"
         ]
     }
+    
+    func getErrorMessage(from json: JSON) -> String {
+        
+        guard let errors = json["errors"] as? [[String: Any]] else { return Message.generalError }
+        
+        var message: String = ""
+        
+        for error in errors {
+            
+            guard let errorMessage = error["message"] as? String else { return Message.generalError }
+            
+            message += "\(errorMessage) "
+        }
+        
+        return message
+    }
 }

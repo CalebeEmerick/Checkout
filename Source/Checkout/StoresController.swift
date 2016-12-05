@@ -12,11 +12,11 @@ import UIKit
 
 class StoresController : UIViewController {
     
+    @IBOutlet fileprivate weak var container: UIView!
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
     
-    fileprivate lazy var presenter: StorePresenter = StorePresenter(storeView: self)
-    fileprivate let dataSource = StoreDataSource()
-    fileprivate let delegate = StoreDelegate()
+    fileprivate var presenter: StorePresenter?
 }
 
 // MARK: - Life Cycle -
@@ -26,9 +26,9 @@ extension StoresController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCollectionView()
-        
-        
+        presenter = StorePresenter(storeView: self)
+        presenter?.setupCollectionView(for: collectionView)
+        presenter?.getStores()
     }
 }
 
@@ -43,10 +43,26 @@ extension StoresController {
 
 extension StoresController : StoresView {
     
-    func setupCollectionView() {
+    func startAnimating() {
         
-        collectionView.dataSource = dataSource
-        collectionView.delegate = delegate
-        presenter.setLayout(for: collectionView)
+        activityIndicator.startAnimating()
+    }
+    
+    func stopAnimating() {
+        
+        activityIndicator.stopAnimating()
+    }
+    
+    func showContainer(with stores: [Store]) {
+        
+//        self.container.alpha = 1
+//        collectionView.reloadData()
+        presenter?.updateStores(for: collectionView, with: stores)
+//        activityIndicator.stopAnimating()
+//        
+//        UIView.animate(withDuration: 0.4) {
+//            
+//            self.container.alpha = 1
+//        }
     }
 }
