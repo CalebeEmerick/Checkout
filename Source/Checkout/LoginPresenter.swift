@@ -27,7 +27,7 @@ struct LoginPresenter {
         service.doLogin(username: username, password: password) { result in
             
             DispatchQueue.main.async {
-                
+            
                 switch result {
                     
                 case let .success(user):

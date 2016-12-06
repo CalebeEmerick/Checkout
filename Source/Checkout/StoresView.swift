@@ -10,8 +10,11 @@ import Foundation
 
 protocol StoresView : class {
     
-    func startAnimating()
-    func stopAnimating()
+    func showLoading()
+    func hideLoading()
     func showContainer()
     func update(stores: [Store])
+    func showError(message: String)
+    func hideError()
+    func tryLoadStoresAgain()
 }

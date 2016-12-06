@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11760" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StoreError" customModule="Checkout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="321"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5j-ae-hml">
+                    <rect key="frame" x="60" y="261" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="EdX-XJ-9W4"/>
+                        <constraint firstAttribute="height" constant="40" id="Ics-hK-jP9"/>
+                    </constraints>
+                    <state key="normal" title="Tentar Novamente">
+                        <color key="titleColor" red="0.062745098040000002" green="0.52156862749999999" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="tryAgainAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dKl-nV-eJ0"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-X3-6NI">
+                    <rect key="frame" x="135" y="10" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="IS7-Fb-44x"/>
+                        <constraint firstAttribute="width" constant="50" id="R9i-MU-Xfg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops! 😬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-eK-btB">
+                    <rect key="frame" x="118" y="80" width="84" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houve um problema ao tentar carregar os dados." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0g-oR-nmr">
+                    <rect key="frame" x="15" y="134" width="290" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por favor, tente novamente." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07x-yR-NHA">
+                    <rect key="frame" x="15" y="190" width="290" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l5j-ae-hml" firstAttribute="centerX" secondItem="07x-yR-NHA" secondAttribute="centerX" id="59s-br-Kg8"/>
+                <constraint firstItem="07x-yR-NHA" firstAttribute="leading" secondItem="q0g-oR-nmr" secondAttribute="leading" id="6Ad-ZO-xqc"/>
+                <constraint firstItem="ZK9-X3-6NI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="6zG-9b-obK"/>
+                <constraint firstItem="tF5-eK-btB" firstAttribute="centerX" secondItem="ZK9-X3-6NI" secondAttribute="centerX" id="FcG-Oq-fYp"/>
+                <constraint firstItem="tF5-eK-btB" firstAttribute="top" secondItem="ZK9-X3-6NI" secondAttribute="bottom" constant="20" id="KQk-1Y-8id"/>
+                <constraint firstAttribute="trailing" secondItem="q0g-oR-nmr" secondAttribute="trailing" constant="15" id="N6c-S7-mwH"/>
+                <constraint firstItem="q0g-oR-nmr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="boC-7n-IXu"/>
+                <constraint firstItem="q0g-oR-nmr" firstAttribute="top" secondItem="tF5-eK-btB" secondAttribute="bottom" constant="30" id="gDN-5T-ddf"/>
+                <constraint firstItem="ZK9-X3-6NI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="koM-ZS-srk"/>
+                <constraint firstItem="l5j-ae-hml" firstAttribute="top" secondItem="07x-yR-NHA" secondAttribute="bottom" constant="50" id="qfc-C6-6Bg"/>
+                <constraint firstItem="07x-yR-NHA" firstAttribute="trailing" secondItem="q0g-oR-nmr" secondAttribute="trailing" id="vDy-Pc-PHx"/>
+                <constraint firstItem="07x-yR-NHA" firstAttribute="top" secondItem="q0g-oR-nmr" secondAttribute="bottom" constant="15" id="wyj-fK-VbI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="errorMessage" destination="q0g-oR-nmr" id="htU-5V-Npw"/>
+                <outlet property="tryAgainButton" destination="l5j-ae-hml" id="2bk-Fs-Vj6"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="64.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="warning" width="50" height="50"/>
+    </resources>
+</document>

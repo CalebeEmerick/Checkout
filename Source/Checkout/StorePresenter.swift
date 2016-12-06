@@ -20,14 +20,9 @@ struct StorePresenter {
     
     func getStores() {
         
-        guard let key = LoginManager.sharedInstance.user?.customerKey else {
-        
-            
-            return
-        }
+        guard let key = LoginManager.sharedInstance.user?.customerKey else { return }
 
-        storeView.startAnimating()
-        
+        storeView.showLoading()
         DispatchQueue.main.async {
             
             self.service.getStores(from: key) { result in
@@ -35,12 +30,13 @@ struct StorePresenter {
                 switch result {
                     
                 case let .success(stores):
-                    self.storeView.stopAnimating()
+                    self.storeView.hideLoading()
                     self.storeView.update(stores: stores)
                     self.storeView.showContainer()
                     
                 case let .failure(error):
-                    print(error)
+                    self.storeView.hideLoading()
+                    self.storeView.showError(message: error)
                 }
             }
         }
