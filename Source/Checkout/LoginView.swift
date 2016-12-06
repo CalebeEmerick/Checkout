@@ -18,4 +18,5 @@ protocol LoginView : class {
     func isFieldsEmpty() -> Bool
     func hideKeyboard()
     func showErrorAlert(_ error: String)
+    func shouldEnableLoginButton()
 }
