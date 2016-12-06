@@ -31,6 +31,7 @@ extension StoresController {
         super.viewDidLoad()
         
         presenter = StorePresenter(storeView: self)
+        delegate.selectedStore = { [weak self] store in self?.openTransactionController(with: store) }
         layout.setupCollectionView(for: collectionView, dataSource: dataSource, delegate: delegate)
         setErrorViewConstraints()
         presenter?.getStores()
@@ -113,5 +114,10 @@ extension StoresController : StoresView {
         hideError()
         showLoading()
         presenter?.getStores()
+    }
+    
+    func openTransactionController(with store: Store) {
+        
+        TransactionRouter.openCreditCardTransactionController(from: self, with: store)
     }
 }

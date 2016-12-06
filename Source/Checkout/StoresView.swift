@@ -17,4 +17,5 @@ protocol StoresView : class {
     func showError(message: String)
     func hideError()
     func tryLoadStoresAgain()
+    func openTransactionController(with store: Store)
 }
