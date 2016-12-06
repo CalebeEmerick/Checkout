@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		347A68E61DF4FA3200FFF0A4 /* LoginLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68E51DF4FA3200FFF0A4 /* LoginLayout.swift */; };
+		347A68E81DF6F9CD00FFF0A4 /* StoreLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68E71DF6F9CD00FFF0A4 /* StoreLayout.swift */; };
 		34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191E71DE761D700EC26FB /* AppDelegate.swift */; };
 		34A191ED1DE761D700EC26FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EB1DE761D700EC26FB /* Main.storyboard */; };
 		34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EE1DE761D700EC26FB /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		347A68E51DF4FA3200FFF0A4 /* LoginLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayout.swift; sourceTree = "<group>"; };
+		347A68E71DF6F9CD00FFF0A4 /* StoreLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreLayout.swift; sourceTree = "<group>"; };
 		34A191E41DE761D700EC26FB /* Checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191E71DE761D700EC26FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A191EC1DE761D700EC26FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				347A68E51DF4FA3200FFF0A4 /* LoginLayout.swift */,
+				347A68E71DF6F9CD00FFF0A4 /* StoreLayout.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				347A68E61DF4FA3200FFF0A4 /* LoginLayout.swift in Sources */,
 				34D6BE161DEDD21400C1E487 /* JSONDecodable.swift in Sources */,
 				34D6BE071DED13AF00C1E487 /* View.swift in Sources */,
+				347A68E81DF6F9CD00FFF0A4 /* StoreLayout.swift in Sources */,
 				34D6BE0E1DEDCDCB00C1E487 /* LoginService.swift in Sources */,
 				34AAEE801DEF5EC900DD5026 /* Image.swift in Sources */,
 				34FA95AE1DEF6A50007F9943 /* StoreService.swift in Sources */,

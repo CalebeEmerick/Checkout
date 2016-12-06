@@ -42,7 +42,7 @@
                         <blurEffect style="extraLight"/>
                     </visualEffectView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store1" translatesAutoresizingMaskIntoConstraints="NO" id="y85-xV-xuB" userLabel="picture">
-                        <rect key="frame" x="0.0" y="0.0" width="175" height="168"/>
+                        <rect key="frame" x="8" y="8" width="159" height="152"/>
                     </imageView>
                 </subviews>
             </view>
@@ -50,15 +50,15 @@
                 <constraint firstItem="lZ2-jP-8LJ" firstAttribute="top" secondItem="t4f-E8-968" secondAttribute="top" id="4zl-F8-lXo"/>
                 <constraint firstItem="lZ2-jP-8LJ" firstAttribute="bottom" secondItem="t4f-E8-968" secondAttribute="bottom" id="5hg-Ce-Imf"/>
                 <constraint firstItem="t4f-E8-968" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6B7-V8-B0Y"/>
-                <constraint firstItem="y85-xV-xuB" firstAttribute="bottom" secondItem="lZ2-jP-8LJ" secondAttribute="bottom" id="Cjl-vP-N4S"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="736-aW-dVB"/>
                 <constraint firstItem="lZ2-jP-8LJ" firstAttribute="trailing" secondItem="t4f-E8-968" secondAttribute="trailing" id="FYC-sY-Lrk"/>
-                <constraint firstItem="y85-xV-xuB" firstAttribute="top" secondItem="lZ2-jP-8LJ" secondAttribute="top" id="H76-DL-a3I"/>
                 <constraint firstItem="t4f-E8-968" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J4c-s0-yPh"/>
-                <constraint firstItem="y85-xV-xuB" firstAttribute="leading" secondItem="lZ2-jP-8LJ" secondAttribute="leading" id="JaC-tM-7we"/>
+                <constraint firstItem="y85-xV-xuB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="XzY-ji-0oN"/>
                 <constraint firstItem="lZ2-jP-8LJ" firstAttribute="leading" secondItem="t4f-E8-968" secondAttribute="leading" id="gzQ-0t-d04"/>
                 <constraint firstAttribute="trailing" secondItem="t4f-E8-968" secondAttribute="trailing" id="i7L-gx-xPp"/>
-                <constraint firstItem="y85-xV-xuB" firstAttribute="trailing" secondItem="lZ2-jP-8LJ" secondAttribute="trailing" id="qZB-V0-lxF"/>
+                <constraint firstAttribute="trailing" secondItem="y85-xV-xuB" secondAttribute="trailing" constant="8" id="tar-3R-ZUv"/>
                 <constraint firstAttribute="bottom" secondItem="t4f-E8-968" secondAttribute="bottom" id="vQG-aA-fxu"/>
+                <constraint firstAttribute="bottom" secondItem="y85-xV-xuB" secondAttribute="bottom" constant="8" id="vqb-n3-usi"/>
             </constraints>
             <size key="customSize" width="175" height="168"/>
             <connections>

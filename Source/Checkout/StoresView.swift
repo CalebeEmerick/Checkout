@@ -6,11 +6,12 @@
 //  Copyright © 2016 CalebeEmerick. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol StoresView : class {
     
     func startAnimating()
     func stopAnimating()
-    func showContainer(with stores: [Store])
+    func showContainer()
+    func update(stores: [Store])
 }

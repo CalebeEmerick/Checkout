@@ -10,5 +10,6 @@ import UIKit
 
 struct Constants {
     
+    static let screenSize = UIScreen.main.bounds
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
 }

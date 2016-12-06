@@ -6,7 +6,7 @@
 //  Copyright © 2016 CalebeEmerick. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol LoginView : class {
     
