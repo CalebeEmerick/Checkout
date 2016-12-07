@@ -30,6 +30,7 @@ extension StoresController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        changeNavigationBarBackButton()
         presenter = StorePresenter(storeView: self)
         delegate.selectedStore = { [weak self] store in self?.openTransactionController(with: store) }
         layout.setupCollectionView(for: collectionView, dataSource: dataSource, delegate: delegate)

@@ -21,6 +21,7 @@ class TransactionController : UITableViewController {
     @IBOutlet fileprivate weak var fullName: UITextField!
     @IBOutlet fileprivate weak var email: UITextField!
     
+    fileprivate var textFields: [UITextField]!
     fileprivate let layout = TransactionLayout()
     var store: Store?
 }
@@ -32,7 +33,7 @@ extension TransactionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setBorderForTextFields()
+        textFields = [cardNumber, cardName, cardValidate, cardSecurityCode, transactionValue, fullName, email]
     }
 }
 
@@ -40,11 +41,41 @@ extension TransactionController {
 
 extension TransactionController {
     
-    fileprivate func setBorderForTextFields() {
+    
+}
+
+// MARK: - UITextFieldDelegate -
+
+extension TransactionController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        let textFields: [UITextField] = [cardNumber, cardName, cardValidate, cardSecurityCode, transactionValue, fullName, email]
+        if textField != email {
+            
+            for index in 0 ..< textFields.count - 1 where textField == textFields[index] {
+                
+                textFields[index + 1].becomeFirstResponder()
+                break
+            }
+        }
+        else { textField.endEditing(true) }
         
+        return true
+    }
+}
+
+// MARK: - UITableViewDelegate -
+
+extension TransactionController {
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
+        switch section {
+            
+        case 0: return 40
+        case 1: return 40
+        default: return 20
+        }
     }
 }
 

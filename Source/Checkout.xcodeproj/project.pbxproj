@@ -16,6 +16,7 @@
 		347A68F41DF7573500FFF0A4 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68F31DF7573500FFF0A4 /* TransactionController.swift */; };
 		347A68F61DF75AB600FFF0A4 /* TransactionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68F51DF75AB600FFF0A4 /* TransactionLayout.swift */; };
 		347A68F91DF7610700FFF0A4 /* TransactionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68F81DF7610700FFF0A4 /* TransactionTextField.swift */; };
+		347A69191DF8881C00FFF0A4 /* NavigationBarStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A69181DF8881C00FFF0A4 /* NavigationBarStyleable.swift */; };
 		34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191E71DE761D700EC26FB /* AppDelegate.swift */; };
 		34A191ED1DE761D700EC26FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EB1DE761D700EC26FB /* Main.storyboard */; };
 		34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EE1DE761D700EC26FB /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		347A68F31DF7573500FFF0A4 /* TransactionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
 		347A68F51DF75AB600FFF0A4 /* TransactionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionLayout.swift; sourceTree = "<group>"; };
 		347A68F81DF7610700FFF0A4 /* TransactionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTextField.swift; sourceTree = "<group>"; };
+		347A69181DF8881C00FFF0A4 /* NavigationBarStyleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleable.swift; sourceTree = "<group>"; };
 		34A191E41DE761D700EC26FB /* Checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191E71DE761D700EC26FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A191EC1DE761D700EC26FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				34D6BE061DED13AF00C1E487 /* View.swift */,
 				34FA95BB1DEF769F007F9943 /* ViewController.swift */,
 				347A68EE1DF73E8C00FFF0A4 /* ViewExtension.swift */,
+				347A69181DF8881C00FFF0A4 /* NavigationBarStyleable.swift */,
 			);
 			name = Snippets;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347A68E61DF4FA3200FFF0A4 /* LoginLayout.swift in Sources */,
+				347A69191DF8881C00FFF0A4 /* NavigationBarStyleable.swift in Sources */,
 				34D6BE161DEDD21400C1E487 /* JSONDecodable.swift in Sources */,
 				34D6BE071DED13AF00C1E487 /* View.swift in Sources */,
 				347A68E81DF6F9CD00FFF0A4 /* StoreLayout.swift in Sources */,
