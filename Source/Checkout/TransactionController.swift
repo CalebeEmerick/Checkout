@@ -24,6 +24,7 @@ class TransactionController : UITableViewController {
     @IBOutlet fileprivate weak var buttonLeadingConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var buttonTrailingConstraint: NSLayoutConstraint!
     
+    fileprivate let datePicker = DatePicker.makeXib()
     fileprivate let dataSource = TransactionDataSource()
     fileprivate let delegate = TransactionDelegate()
     fileprivate let layout = TransactionLayout()
@@ -54,6 +55,16 @@ extension TransactionController {
 // MARK: - UITextFieldDelegate -
 
 extension TransactionController : UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == cardValidate {
+            
+            textField.inputView = datePicker
+        }
+        
+        return true
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
