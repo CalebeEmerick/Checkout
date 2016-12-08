@@ -13,18 +13,19 @@ final class DatePicker : UIView {
     @IBOutlet fileprivate weak var picker: UIPickerView!
     
     fileprivate let dataSource = DatePickerDataSource()
-    fileprivate let delegate = DatePickerDelegate()
-    fileprivate let valityDate = ValityDate()
+    let delegate = DatePickerDelegate()
+//    var valityDate: ((ValityDate) -> Void)?
 }
 
 extension DatePicker {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        dataSource.valityDate = valityDate
-        delegate.valityDate = valityDate
+
+//        delegate.selectedValityDate = { [weak self] valityDate in  }
         picker.dataSource = dataSource
         picker.delegate = delegate
+        picker.selectRow(5, inComponent: 0, animated: true)
+        picker.selectRow(5, inComponent: 1, animated: true)
     }
 }

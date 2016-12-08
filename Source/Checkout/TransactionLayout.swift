@@ -17,4 +17,11 @@ struct TransactionLayout {
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
     }
+    
+//    func changeButtonState(from textField: UITextField) {
+//        
+//        guard let text = textField.text else { return }
+//        
+//        if text.isEmpty
+//    }
 }

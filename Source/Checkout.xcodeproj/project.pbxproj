@@ -31,9 +31,12 @@
 		34A33FCA1DF9B373003E22E5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FC91DF9B373003E22E5 /* DatePicker.swift */; };
 		34A33FCC1DF9B41A003E22E5 /* DatePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FCB1DF9B41A003E22E5 /* DatePickerDataSource.swift */; };
 		34A33FCE1DF9B49B003E22E5 /* DatePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FCD1DF9B49B003E22E5 /* DatePickerDelegate.swift */; };
-		34A33FD01DF9B546003E22E5 /* ValityDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FCF1DF9B546003E22E5 /* ValityDate.swift */; };
+		34A33FD01DF9B546003E22E5 /* DateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FCF1DF9B546003E22E5 /* DateComponent.swift */; };
 		34A33FD21DF9CD86003E22E5 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FD11DF9CD86003E22E5 /* Month.swift */; };
 		34A33FD41DF9CD92003E22E5 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FD31DF9CD92003E22E5 /* Year.swift */; };
+		34A33FD61DF9D56A003E22E5 /* ValityDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FD51DF9D56A003E22E5 /* ValityDate.swift */; };
+		34A33FD91DF9DA32003E22E5 /* DatePickerAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FD81DF9DA32003E22E5 /* DatePickerAccessory.swift */; };
+		34A33FDB1DF9DA4A003E22E5 /* DatePickerAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A33FDA1DF9DA4A003E22E5 /* DatePickerAccessory.xib */; };
 		34AAEE6F1DEF4AF000DD5026 /* LoginManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */; };
 		34AAEE751DEF53DF00DD5026 /* StoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE741DEF53DF00DD5026 /* StoresController.swift */; };
 		34AAEE771DEF547900DD5026 /* StoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE761DEF547900DD5026 /* StoresView.swift */; };
@@ -110,9 +113,12 @@
 		34A33FC91DF9B373003E22E5 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		34A33FCB1DF9B41A003E22E5 /* DatePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDataSource.swift; sourceTree = "<group>"; };
 		34A33FCD1DF9B49B003E22E5 /* DatePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDelegate.swift; sourceTree = "<group>"; };
-		34A33FCF1DF9B546003E22E5 /* ValityDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValityDate.swift; sourceTree = "<group>"; };
+		34A33FCF1DF9B546003E22E5 /* DateComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponent.swift; sourceTree = "<group>"; };
 		34A33FD11DF9CD86003E22E5 /* Month.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		34A33FD31DF9CD92003E22E5 /* Year.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		34A33FD51DF9D56A003E22E5 /* ValityDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValityDate.swift; sourceTree = "<group>"; };
+		34A33FD81DF9DA32003E22E5 /* DatePickerAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerAccessory.swift; sourceTree = "<group>"; };
+		34A33FDA1DF9DA4A003E22E5 /* DatePickerAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerAccessory.xib; sourceTree = "<group>"; };
 		34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManageable.swift; sourceTree = "<group>"; };
 		34AAEE741DEF53DF00DD5026 /* StoresController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresController.swift; sourceTree = "<group>"; };
 		34AAEE761DEF547900DD5026 /* StoresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresView.swift; sourceTree = "<group>"; };
@@ -312,15 +318,25 @@
 		34A33FC61DF9B2D0003E22E5 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				34A33FC71DF9B2F0003E22E5 /* DatePicker.xib */,
-				34A33FC91DF9B373003E22E5 /* DatePicker.swift */,
+				34A33FD71DF9DA01003E22E5 /* View */,
 				34A33FCB1DF9B41A003E22E5 /* DatePickerDataSource.swift */,
 				34A33FCD1DF9B49B003E22E5 /* DatePickerDelegate.swift */,
-				34A33FCF1DF9B546003E22E5 /* ValityDate.swift */,
+				34A33FCF1DF9B546003E22E5 /* DateComponent.swift */,
 				34A33FD11DF9CD86003E22E5 /* Month.swift */,
 				34A33FD31DF9CD92003E22E5 /* Year.swift */,
 			);
 			name = DatePicker;
+			sourceTree = "<group>";
+		};
+		34A33FD71DF9DA01003E22E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34A33FC71DF9B2F0003E22E5 /* DatePicker.xib */,
+				34A33FC91DF9B373003E22E5 /* DatePicker.swift */,
+				34A33FDA1DF9DA4A003E22E5 /* DatePickerAccessory.xib */,
+				34A33FD81DF9DA32003E22E5 /* DatePickerAccessory.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		34AAEE701DEF4BE500DD5026 /* Snippets */ = {
@@ -404,6 +420,7 @@
 				34A33FC41DF99D8B003E22E5 /* CreditCardBrand.swift */,
 				347A69211DF8947500FFF0A4 /* Person.swift */,
 				34EE27FC1DF8960000DAFB81 /* Transaction.swift */,
+				34A33FD51DF9D56A003E22E5 /* ValityDate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -525,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A33FDB1DF9DA4A003E22E5 /* DatePickerAccessory.xib in Resources */,
 				347A68ED1DF7130700FFF0A4 /* StoreError.xib in Resources */,
 				34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */,
 				34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */,
@@ -553,6 +571,7 @@
 				347A69191DF8881C00FFF0A4 /* NavigationBarStyleable.swift in Sources */,
 				34D6BE161DEDD21400C1E487 /* JSONDecodable.swift in Sources */,
 				34D6BE071DED13AF00C1E487 /* View.swift in Sources */,
+				34A33FD91DF9DA32003E22E5 /* DatePickerAccessory.swift in Sources */,
 				34A33FD41DF9CD92003E22E5 /* Year.swift in Sources */,
 				34A33FCC1DF9B41A003E22E5 /* DatePickerDataSource.swift in Sources */,
 				347A68E81DF6F9CD00FFF0A4 /* StoreLayout.swift in Sources */,
@@ -580,7 +599,7 @@
 				34AAEE8D1DEF644300DD5026 /* TableViewReusable.swift in Sources */,
 				34FA95B01DEF6A7C007F9943 /* Result.swift in Sources */,
 				34FA95BA1DEF73FE007F9943 /* Storyboard.swift in Sources */,
-				34A33FD01DF9B546003E22E5 /* ValityDate.swift in Sources */,
+				34A33FD01DF9B546003E22E5 /* DateComponent.swift in Sources */,
 				34A33FC51DF99D8B003E22E5 /* CreditCardBrand.swift in Sources */,
 				34A33FCA1DF9B373003E22E5 /* DatePicker.swift in Sources */,
 				34EE28001DF8A71A00DAFB81 /* CreditCardCell.swift in Sources */,
@@ -599,6 +618,7 @@
 				34AAEE8F1DEF661500DD5026 /* StorePresenter.swift in Sources */,
 				34FA95B51DEF72E7007F9943 /* Router.swift in Sources */,
 				347A691C1DF88BF400FFF0A4 /* TransactionDataSource.swift in Sources */,
+				34A33FD61DF9D56A003E22E5 /* ValityDate.swift in Sources */,
 				347A68F91DF7610700FFF0A4 /* TransactionTextField.swift in Sources */,
 				34AAEE8A1DEF644300DD5026 /* CollectionViewReusable.swift in Sources */,
 				34FCCBD81DECF7690025CFAA /* Color.swift in Sources */,

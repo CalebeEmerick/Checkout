@@ -25,6 +25,7 @@ final class TransactionController : UITableViewController {
     @IBOutlet fileprivate weak var buttonTrailingConstraint: NSLayoutConstraint!
     
     fileprivate let datePicker = DatePicker.makeXib()
+    fileprivate let datePickerAccessory = DatePickerAccessory.makeXib()
     fileprivate let dataSource = TransactionDataSource()
     fileprivate let delegate = TransactionDelegate()
     fileprivate let layout = TransactionLayout()
@@ -39,7 +40,9 @@ extension TransactionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate.creditCardSelected = { [weak self] brand in print(brand.name)  }
+        datePickerAccessory.didCancel = { self.view.endEditing(true) }
+        datePickerAccessory.didSelected = { self.setValityDateFor(month: self.datePicker.delegate.selectedMonth, year: self.datePicker.delegate.selectedYear) }
+        delegate.creditCardSelected = { /* [weak self] */ brand in print(brand.name)  }
         layout.setupCollectionView(for: collectionView, dataSource: dataSource, delegate: delegate)
         textFields = [cardNumber, cardName, cardValidate, cardSecurityCode, transactionValue, fullName, email]
     }
@@ -49,7 +52,10 @@ extension TransactionController {
 
 extension TransactionController {
     
-    
+    fileprivate func setValityDateFor(month: String, year: String) {
+        
+        cardValidate.text = "\(month)/\(year)"
+    }
 }
 
 // MARK: - UITextFieldDelegate -
@@ -61,6 +67,7 @@ extension TransactionController : UITextFieldDelegate {
         if textField == cardValidate {
             
             textField.inputView = datePicker
+            textField.inputAccessoryView = datePickerAccessory
         }
         
         return true

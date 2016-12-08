@@ -10,7 +10,11 @@ import UIKit
 
 final class DatePickerDelegate : NSObject {
 
-    var valityDate: ValityDate?
+    fileprivate let dateComponent = DateComponent()
+    fileprivate(set) var selectedMonth = "06"
+    fileprivate(set) var selectedYear = "2021"
+    fileprivate(set) var apiSelectedMonth = 06
+    fileprivate(set) var apiSelectedYear = 2021
 }
 
 extension DatePickerDelegate : UIPickerViewDelegate {
@@ -19,11 +23,25 @@ extension DatePickerDelegate : UIPickerViewDelegate {
         
         if component == 0 {
             
-            return valityDate?.months[row].monthFormatted
+            return dateComponent.months[row].monthFormatted
         }
         else {
             
-            return valityDate?.years[row].yearFormmated
+            return dateComponent.years[row].yearFormmated
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        if component == 0 {
+            
+            selectedMonth = dateComponent.months[row].monthNumberFormatterd
+            apiSelectedMonth = dateComponent.months[row].apiMonth
+        }
+        else {
+            
+            selectedYear = dateComponent.years[row].yearFormmated
+            apiSelectedYear = dateComponent.years[row].apiYear
         }
     }
 }

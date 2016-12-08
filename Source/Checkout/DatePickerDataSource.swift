@@ -10,7 +10,7 @@ import UIKit
 
 final class DatePickerDataSource : NSObject {
 
-    var valityDate: ValityDate?
+    fileprivate let dateComponent = DateComponent()
 }
 
 extension DatePickerDataSource : UIPickerViewDataSource {
@@ -22,16 +22,13 @@ extension DatePickerDataSource : UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        guard let monthsCount = valityDate?.months.count else { return 0 }
-        guard let yearsCount = valityDate?.years.count else { return 0 }
-        
         if component == 0 {
             
-            return monthsCount
+            return dateComponent.months.count
         }
         else {
             
-            return yearsCount
+            return dateComponent.years.count
         }
     }
 }

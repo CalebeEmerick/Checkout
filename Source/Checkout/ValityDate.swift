@@ -10,15 +10,14 @@ import Foundation
 
 struct ValityDate {
     
-    let months: [Month]
-    let years: [Year]
+    let month: Int
+    let year: Int
+}
+
+extension ValityDate {
     
-    init() {
-        
-        months = [ .jan, .feb, .mar, .apr, .may, .jun, .jul, .aug, .set, .oct, .nov, .dez ]
-        years = [
-            .year2016, .year2017, .year2018, .year2019, .year2020, .year2021,
-            .year2022, .year2023, .year2024, .year2025, .year2026
-        ]
+    var dateFormatted: String {
+    
+        return "\(month)/\(year)"
     }
 }
