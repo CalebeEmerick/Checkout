@@ -17,11 +17,16 @@
 		347A68F61DF75AB600FFF0A4 /* TransactionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68F51DF75AB600FFF0A4 /* TransactionLayout.swift */; };
 		347A68F91DF7610700FFF0A4 /* TransactionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A68F81DF7610700FFF0A4 /* TransactionTextField.swift */; };
 		347A69191DF8881C00FFF0A4 /* NavigationBarStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A69181DF8881C00FFF0A4 /* NavigationBarStyleable.swift */; };
+		347A691C1DF88BF400FFF0A4 /* TransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A691B1DF88BF400FFF0A4 /* TransactionDataSource.swift */; };
+		347A691E1DF88C4100FFF0A4 /* TransactionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A691D1DF88C4100FFF0A4 /* TransactionDelegate.swift */; };
+		347A69201DF88CD500FFF0A4 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A691F1DF88CD500FFF0A4 /* CreditCard.swift */; };
+		347A69221DF8947500FFF0A4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A69211DF8947500FFF0A4 /* Person.swift */; };
 		34A191E81DE761D700EC26FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191E71DE761D700EC26FB /* AppDelegate.swift */; };
 		34A191ED1DE761D700EC26FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EB1DE761D700EC26FB /* Main.storyboard */; };
 		34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A191EE1DE761D700EC26FB /* Assets.xcassets */; };
 		34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A191F01DE761D700EC26FB /* LaunchScreen.storyboard */; };
 		34A191FD1DE761D700EC26FB /* CheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A191FC1DE761D700EC26FB /* CheckoutTests.swift */; };
+		34A33FC51DF99D8B003E22E5 /* CreditCardBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A33FC41DF99D8B003E22E5 /* CreditCardBrand.swift */; };
 		34AAEE6F1DEF4AF000DD5026 /* LoginManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */; };
 		34AAEE751DEF53DF00DD5026 /* StoresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE741DEF53DF00DD5026 /* StoresController.swift */; };
 		34AAEE771DEF547900DD5026 /* StoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAEE761DEF547900DD5026 /* StoresView.swift */; };
@@ -44,6 +49,9 @@
 		34D6BE161DEDD21400C1E487 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6BE151DEDD21400C1E487 /* JSONDecodable.swift */; };
 		34D6BE181DEDEE7B00C1E487 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6BE171DEDEE7B00C1E487 /* Message.swift */; };
 		34D6BE1A1DEE081E00C1E487 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D6BE191DEE081E00C1E487 /* LoginPresenter.swift */; };
+		34EE27FD1DF8960000DAFB81 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE27FC1DF8960000DAFB81 /* Transaction.swift */; };
+		34EE28001DF8A71A00DAFB81 /* CreditCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE27FE1DF8A71A00DAFB81 /* CreditCardCell.swift */; };
+		34EE28011DF8A71A00DAFB81 /* CreditCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EE27FF1DF8A71A00DAFB81 /* CreditCardCell.xib */; };
 		34FA95AE1DEF6A50007F9943 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95AD1DEF6A50007F9943 /* StoreService.swift */; };
 		34FA95B01DEF6A7C007F9943 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95AF1DEF6A7C007F9943 /* Result.swift */; };
 		34FA95B21DEF6E83007F9943 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA95B11DEF6E83007F9943 /* ServiceProtocol.swift */; };
@@ -77,6 +85,10 @@
 		347A68F51DF75AB600FFF0A4 /* TransactionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionLayout.swift; sourceTree = "<group>"; };
 		347A68F81DF7610700FFF0A4 /* TransactionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTextField.swift; sourceTree = "<group>"; };
 		347A69181DF8881C00FFF0A4 /* NavigationBarStyleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleable.swift; sourceTree = "<group>"; };
+		347A691B1DF88BF400FFF0A4 /* TransactionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDataSource.swift; sourceTree = "<group>"; };
+		347A691D1DF88C4100FFF0A4 /* TransactionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDelegate.swift; sourceTree = "<group>"; };
+		347A691F1DF88CD500FFF0A4 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		347A69211DF8947500FFF0A4 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		34A191E41DE761D700EC26FB /* Checkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191E71DE761D700EC26FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A191EC1DE761D700EC26FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +98,7 @@
 		34A191F81DE761D700EC26FB /* CheckoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A191FC1DE761D700EC26FB /* CheckoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTests.swift; sourceTree = "<group>"; };
 		34A191FE1DE761D700EC26FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34A33FC41DF99D8B003E22E5 /* CreditCardBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardBrand.swift; sourceTree = "<group>"; };
 		34AAEE6E1DEF4AF000DD5026 /* LoginManageable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManageable.swift; sourceTree = "<group>"; };
 		34AAEE741DEF53DF00DD5026 /* StoresController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresController.swift; sourceTree = "<group>"; };
 		34AAEE761DEF547900DD5026 /* StoresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresView.swift; sourceTree = "<group>"; };
@@ -108,6 +121,9 @@
 		34D6BE151DEDD21400C1E487 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		34D6BE171DEDEE7B00C1E487 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		34D6BE191DEE081E00C1E487 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		34EE27FC1DF8960000DAFB81 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		34EE27FE1DF8A71A00DAFB81 /* CreditCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCell.swift; sourceTree = "<group>"; };
+		34EE27FF1DF8A71A00DAFB81 /* CreditCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardCell.xib; sourceTree = "<group>"; };
 		34FA95AD1DEF6A50007F9943 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
 		34FA95AF1DEF6A7C007F9943 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34FA95B11DEF6E83007F9943 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
@@ -161,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				347A68F31DF7573500FFF0A4 /* TransactionController.swift */,
+				347A691A1DF88BE000FFF0A4 /* CollectionView */,
 			);
 			name = Transaction;
 			sourceTree = "<group>";
@@ -172,6 +189,17 @@
 				347A68F81DF7610700FFF0A4 /* TransactionTextField.swift */,
 			);
 			name = Transaction;
+			sourceTree = "<group>";
+		};
+		347A691A1DF88BE000FFF0A4 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				347A691B1DF88BF400FFF0A4 /* TransactionDataSource.swift */,
+				347A691D1DF88C4100FFF0A4 /* TransactionDelegate.swift */,
+				34EE27FF1DF8A71A00DAFB81 /* CreditCardCell.xib */,
+				34EE27FE1DF8A71A00DAFB81 /* CreditCardCell.swift */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		34A191DB1DE761D700EC26FB = {
@@ -343,6 +371,10 @@
 			children = (
 				34D6BE101DEDCE5300C1E487 /* User.swift */,
 				34AAEE7D1DEF5C7900DD5026 /* Store.swift */,
+				347A691F1DF88CD500FFF0A4 /* CreditCard.swift */,
+				34A33FC41DF99D8B003E22E5 /* CreditCardBrand.swift */,
+				347A69211DF8947500FFF0A4 /* Person.swift */,
+				34EE27FC1DF8960000DAFB81 /* Transaction.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -468,6 +500,7 @@
 				34A191F21DE761D700EC26FB /* LaunchScreen.storyboard in Resources */,
 				34A191EF1DE761D700EC26FB /* Assets.xcassets in Resources */,
 				34A191ED1DE761D700EC26FB /* Main.storyboard in Resources */,
+				34EE28011DF8A71A00DAFB81 /* CreditCardCell.xib in Resources */,
 				34AAEE7C1DEF54EE00DD5026 /* StoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,8 +533,11 @@
 				347A68F11DF74E9500FFF0A4 /* TransactionRouter.swift in Sources */,
 				34D6BE1A1DEE081E00C1E487 /* LoginPresenter.swift in Sources */,
 				34FA95BC1DEF769F007F9943 /* ViewController.swift in Sources */,
+				34EE27FD1DF8960000DAFB81 /* Transaction.swift in Sources */,
 				34FA95BE1DEF7862007F9943 /* ControllerStack.swift in Sources */,
+				347A69221DF8947500FFF0A4 /* Person.swift in Sources */,
 				34D6BE141DEDCF8200C1E487 /* Just.swift in Sources */,
+				347A69201DF88CD500FFF0A4 /* CreditCard.swift in Sources */,
 				34AAEE821DEF63B700DD5026 /* StoreDataSource.swift in Sources */,
 				34AAEE751DEF53DF00DD5026 /* StoresController.swift in Sources */,
 				347A68EB1DF712E600FFF0A4 /* StoreError.swift in Sources */,
@@ -511,11 +547,14 @@
 				34AAEE8D1DEF644300DD5026 /* TableViewReusable.swift in Sources */,
 				34FA95B01DEF6A7C007F9943 /* Result.swift in Sources */,
 				34FA95BA1DEF73FE007F9943 /* Storyboard.swift in Sources */,
+				34A33FC51DF99D8B003E22E5 /* CreditCardBrand.swift in Sources */,
+				34EE28001DF8A71A00DAFB81 /* CreditCardCell.swift in Sources */,
 				34FA95B21DEF6E83007F9943 /* ServiceProtocol.swift in Sources */,
 				34AAEE8C1DEF644300DD5026 /* Reusable.swift in Sources */,
 				34AAEE771DEF547900DD5026 /* StoresView.swift in Sources */,
 				34D6BE0A1DEDB73500C1E487 /* LoginView.swift in Sources */,
 				34AAEE6F1DEF4AF000DD5026 /* LoginManageable.swift in Sources */,
+				347A691E1DF88C4100FFF0A4 /* TransactionDelegate.swift in Sources */,
 				34AAEE7B1DEF54EE00DD5026 /* StoreCell.swift in Sources */,
 				347A68F61DF75AB600FFF0A4 /* TransactionLayout.swift in Sources */,
 				34D6BE181DEDEE7B00C1E487 /* Message.swift in Sources */,
@@ -523,6 +562,7 @@
 				347A68F41DF7573500FFF0A4 /* TransactionController.swift in Sources */,
 				34AAEE8F1DEF661500DD5026 /* StorePresenter.swift in Sources */,
 				34FA95B51DEF72E7007F9943 /* Router.swift in Sources */,
+				347A691C1DF88BF400FFF0A4 /* TransactionDataSource.swift in Sources */,
 				347A68F91DF7610700FFF0A4 /* TransactionTextField.swift in Sources */,
 				34AAEE8A1DEF644300DD5026 /* CollectionViewReusable.swift in Sources */,
 				34FCCBD81DECF7690025CFAA /* Color.swift in Sources */,

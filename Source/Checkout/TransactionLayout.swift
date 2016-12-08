@@ -10,5 +10,11 @@ import UIKit
 
 struct TransactionLayout {
     
-    
+    func setupCollectionView(for collectionView: UICollectionView, dataSource: UICollectionViewDataSource, delegate: UICollectionViewDelegate) {
+     
+        collectionView.register(cellNib: CreditCardCell.self)
+        collectionView.allowsMultipleSelection = false
+        collectionView.dataSource = dataSource
+        collectionView.delegate = delegate
+    }
 }

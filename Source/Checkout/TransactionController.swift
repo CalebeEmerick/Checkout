@@ -20,9 +20,14 @@ class TransactionController : UITableViewController {
     @IBOutlet fileprivate weak var transactionValue: UITextField!
     @IBOutlet fileprivate weak var fullName: UITextField!
     @IBOutlet fileprivate weak var email: UITextField!
+    @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var buttonLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var buttonTrailingConstraint: NSLayoutConstraint!
     
-    fileprivate var textFields: [UITextField]!
+    fileprivate let dataSource = TransactionDataSource()
+    fileprivate let delegate = TransactionDelegate()
     fileprivate let layout = TransactionLayout()
+    fileprivate var textFields: [UITextField]!
     var store: Store?
 }
 
@@ -33,6 +38,8 @@ extension TransactionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        delegate.creditCardSelected = { [weak self] brand in print(brand.name)  }
+        layout.setupCollectionView(for: collectionView, dataSource: dataSource, delegate: delegate)
         textFields = [cardNumber, cardName, cardValidate, cardSecurityCode, transactionValue, fullName, email]
     }
 }
