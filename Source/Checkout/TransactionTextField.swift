@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionTextField : UITextField {
+final class TransactionTextField : UITextField {
 
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         

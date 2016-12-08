@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreDataSource : NSObject {
+final class StoreDataSource : NSObject {
     
     var stores: [Store] = []
 }

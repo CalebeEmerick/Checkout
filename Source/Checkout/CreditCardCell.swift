@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreditCardCell : UICollectionViewCell {
+final class CreditCardCell : UICollectionViewCell {
 
     @IBOutlet fileprivate weak var creditCardImage: UIImageView!
     @IBOutlet fileprivate weak var selectedImage: UIImageView!

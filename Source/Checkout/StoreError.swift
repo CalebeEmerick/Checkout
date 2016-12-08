@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreError : UIView {
+final class StoreError : UIView {
     
     @IBOutlet fileprivate weak var errorMessage: UILabel!
     @IBOutlet fileprivate weak var tryAgainButton: UIButton!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatePickerDelegate : NSObject {
+final class DatePickerDelegate : NSObject {
 
     var valityDate: ValityDate?
 }

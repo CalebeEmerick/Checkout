@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Variables & Outlets -
 
-class StoresController : UIViewController {
+final class StoresController : UIViewController {
     
     @IBOutlet fileprivate weak var container: UIView!
     @IBOutlet fileprivate weak var collectionView: UICollectionView!

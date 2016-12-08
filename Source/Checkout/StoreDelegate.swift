@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreDelegate : NSObject {
+final class StoreDelegate : NSObject {
     
     var selectedStore: ((Store) -> Void)?
 }

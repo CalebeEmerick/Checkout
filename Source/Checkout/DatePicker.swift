@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatePicker : UIView {
+final class DatePicker : UIView {
 
     @IBOutlet fileprivate weak var picker: UIPickerView!
     

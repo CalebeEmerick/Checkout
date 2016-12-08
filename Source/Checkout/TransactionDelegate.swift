@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionDelegate : NSObject {
+final class TransactionDelegate : NSObject {
     
     var creditCardSelected: ((CreditCardBrand) -> Void)?
 }

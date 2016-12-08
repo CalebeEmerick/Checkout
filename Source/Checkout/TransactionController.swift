@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Variables & Outlets -
 
-class TransactionController : UITableViewController {
+final class TransactionController : UITableViewController {
 
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     @IBOutlet fileprivate weak var cardNumber: UITextField!

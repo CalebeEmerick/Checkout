@@ -17,7 +17,7 @@ protocol LoginManageable {
     func removeUser()
 }
 
-class LoginManager : LoginManageable {
+final class LoginManager : LoginManageable {
     
     static var sharedInstance: LoginManageable = LoginManager()
     private init() { }

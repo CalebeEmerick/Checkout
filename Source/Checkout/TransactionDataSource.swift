@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionDataSource : NSObject {
+final class TransactionDataSource : NSObject {
     
     fileprivate let creditCardBrands: [CreditCardBrand] = [
         

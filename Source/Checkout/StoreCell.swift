@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoreCell : UICollectionViewCell {
+final class StoreCell : UICollectionViewCell {
 
     @IBOutlet fileprivate weak var picture: UIImageView!
     

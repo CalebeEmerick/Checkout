@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatePickerDataSource : NSObject {
+final class DatePickerDataSource : NSObject {
 
     var valityDate: ValityDate?
 }
