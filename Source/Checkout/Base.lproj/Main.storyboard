@@ -65,7 +65,7 @@
                                         <rect key="frame" x="0.0" y="287" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7qp-th-1Ek" id="jas-of-Niv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-ip-VFI">
@@ -108,7 +108,7 @@
                                         <rect key="frame" x="0.0" y="327" width="320" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gaf-oo-hwV" id="pN6-5v-4l6">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-qu-vRM">
@@ -151,7 +151,7 @@
                                         <rect key="frame" x="0.0" y="384" width="320" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="222-sa-V4y" id="DuX-CE-xtO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="103.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-gz-j3r">
@@ -285,11 +285,11 @@
                         <sections>
                             <tableViewSection headerTitle="Cartão de Crédito" id="1Je-fn-chQ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="358" id="poA-9y-Utb">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="358"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="389" id="poA-9y-Utb">
+                                        <rect key="frame" x="0.0" y="56" width="320" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poA-9y-Utb" id="cIE-Uy-451">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="357"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a Bandeira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnT-Jb-eX1">
@@ -299,10 +299,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-EQ-U2x">
-                                                    <rect key="frame" x="15" y="51" width="290" height="51"/>
+                                                    <rect key="frame" x="15" y="51" width="290" height="52"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="51" id="ZXD-6A-ZOg"/>
+                                                        <constraint firstAttribute="height" constant="52" id="ZXD-6A-ZOg"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="iao-2U-Pe9">
                                                         <size key="itemSize" width="44" height="51"/>
@@ -313,7 +313,7 @@
                                                     <cells/>
                                                 </collectionView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número do Cartão" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="DnG-UI-PeZ" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="122" width="290" height="40"/>
+                                                    <rect key="frame" x="15" y="123" width="290" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="JNi-w6-yf3"/>
                                                     </constraints>
@@ -325,16 +325,16 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Como Está no Cartão" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-Fo-G9Y" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="182" width="290" height="40"/>
+                                                    <rect key="frame" x="15" y="183" width="290" height="40"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="Aqg-bU-hze" id="Rh3-dp-cbz"/>
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Data de Validade" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="rMc-Tl-xci" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="242" width="137.5" height="40"/>
+                                                    <rect key="frame" x="15" y="243" width="137.5" height="40"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
@@ -342,8 +342,8 @@
                                                         <outlet property="delegate" destination="Aqg-bU-hze" id="SwD-ll-VFo"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cód de Seg (CVV)" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="kBj-jw-kYa" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
-                                                    <rect key="frame" x="167.5" y="242" width="137.5" height="40"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="kBj-jw-kYa" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
+                                                    <rect key="frame" x="167.5" y="243" width="137.5" height="40"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
@@ -352,7 +352,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Valor da Transação" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-dA-kZW" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
-                                                    <rect key="frame" x="48" y="302" width="257" height="40"/>
+                                                    <rect key="frame" x="48" y="333" width="257" height="40"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="next"/>
@@ -361,16 +361,23 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJF-TW-nyP">
-                                                    <rect key="frame" x="15" y="309.5" width="25" height="24"/>
+                                                    <rect key="frame" x="15" y="341" width="25" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV é o código de segurança impresso no verso do seu cartão de crédito com 3 dígitos." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cij-2G-72C">
+                                                    <rect key="frame" x="15" y="291" width="290" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fNC-dA-kZW" firstAttribute="top" secondItem="rMc-Tl-xci" secondAttribute="bottom" constant="20" id="0BX-rc-Yys"/>
                                                 <constraint firstItem="z3c-EQ-U2x" firstAttribute="top" secondItem="bnT-Jb-eX1" secondAttribute="bottom" constant="15" id="6GS-e5-PkZ"/>
+                                                <constraint firstItem="fNC-dA-kZW" firstAttribute="top" secondItem="Cij-2G-72C" secondAttribute="bottom" constant="15" id="BWy-eI-PL7"/>
                                                 <constraint firstItem="kBj-jw-kYa" firstAttribute="trailing" secondItem="KHT-Fo-G9Y" secondAttribute="trailing" id="C8w-XT-cEB"/>
+                                                <constraint firstItem="Cij-2G-72C" firstAttribute="leading" secondItem="rMc-Tl-xci" secondAttribute="leading" id="Ddv-eJ-Xbz"/>
                                                 <constraint firstAttribute="trailing" secondItem="z3c-EQ-U2x" secondAttribute="trailing" constant="15" id="E0t-rA-75U"/>
                                                 <constraint firstItem="kBj-jw-kYa" firstAttribute="height" secondItem="rMc-Tl-xci" secondAttribute="height" id="FPZ-4P-BhN"/>
                                                 <constraint firstItem="rMc-Tl-xci" firstAttribute="top" secondItem="KHT-Fo-G9Y" secondAttribute="bottom" constant="20" id="ImU-qS-k9l"/>
@@ -378,7 +385,9 @@
                                                 <constraint firstItem="rMc-Tl-xci" firstAttribute="leading" secondItem="KHT-Fo-G9Y" secondAttribute="leading" id="MHI-R1-171"/>
                                                 <constraint firstItem="fNC-dA-kZW" firstAttribute="height" secondItem="rMc-Tl-xci" secondAttribute="height" id="Ri4-Y7-8hY"/>
                                                 <constraint firstItem="bnT-Jb-eX1" firstAttribute="leading" secondItem="cIE-Uy-451" secondAttribute="leading" constant="15" id="TWR-hY-E5v"/>
+                                                <constraint firstItem="Cij-2G-72C" firstAttribute="top" secondItem="kBj-jw-kYa" secondAttribute="bottom" constant="8" id="X4h-z1-yQX"/>
                                                 <constraint firstItem="DnG-UI-PeZ" firstAttribute="trailing" secondItem="z3c-EQ-U2x" secondAttribute="trailing" id="Y2x-Nl-b7X"/>
+                                                <constraint firstItem="Cij-2G-72C" firstAttribute="trailing" secondItem="kBj-jw-kYa" secondAttribute="trailing" id="al0-ZT-06u"/>
                                                 <constraint firstItem="PJF-TW-nyP" firstAttribute="leading" secondItem="rMc-Tl-xci" secondAttribute="leading" id="bIY-8J-BZi"/>
                                                 <constraint firstItem="KHT-Fo-G9Y" firstAttribute="height" secondItem="DnG-UI-PeZ" secondAttribute="height" id="dqn-vE-k15"/>
                                                 <constraint firstItem="fNC-dA-kZW" firstAttribute="trailing" secondItem="kBj-jw-kYa" secondAttribute="trailing" id="ekY-g8-R5S"/>
@@ -402,10 +411,10 @@
                             <tableViewSection headerTitle="Dados Pessoais" id="E3H-m0-TWm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="Y3m-q3-9xW">
-                                        <rect key="frame" x="0.0" y="461" width="320" height="131"/>
+                                        <rect key="frame" x="0.0" y="492" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y3m-q3-9xW" id="o72-GL-4JK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="130.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome Completo" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-gJ-ILV" customClass="TransactionTextField" customModule="Checkout" customModuleProvider="target">
@@ -415,7 +424,7 @@
                                                     </constraints>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="Aqg-bU-hze" id="wkQ-Pc-YCC"/>
                                                     </connections>
@@ -446,7 +455,7 @@
                             <tableViewSection id="zEv-0i-QPQ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="65" id="K8D-DY-cGP">
-                                        <rect key="frame" x="0.0" y="640" width="320" height="65"/>
+                                        <rect key="frame" x="0.0" y="671" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8D-DY-cGP" id="ZTR-DO-AkE">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>

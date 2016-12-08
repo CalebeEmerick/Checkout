@@ -39,7 +39,7 @@ extension TransactionController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         datePickerAccessory.didCancel = { self.view.endEditing(true) }
         datePickerAccessory.didSelected = { self.setValityDateFor(month: self.datePicker.delegate.selectedMonth, year: self.datePicker.delegate.selectedYear) }
         delegate.creditCardSelected = { /* [weak self] */ brand in print(brand.name)  }
