@@ -466,7 +466,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="ay7-5x-EdI"/>
                                                     </constraints>
-                                                    <state key="normal" title="Efetuar Transação" backgroundImage="blue-background"/>
+                                                    <state key="normal" title="Transferir" backgroundImage="blue-background"/>
                                                     <connections>
                                                         <action selector="makeTransaction:" destination="Aqg-bU-hze" eventType="touchUpInside" id="kZ3-yQ-Dzv"/>
                                                     </connections>
@@ -493,7 +493,14 @@
                             <outlet property="delegate" destination="Aqg-bU-hze" id="h1p-do-yxE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Transação" id="RyR-jL-AXX"/>
+                    <navigationItem key="navigationItem" title="Transação" id="RyR-jL-AXX">
+                        <barButtonItem key="rightBarButtonItem" title="Transferir" id="A6S-PH-d9Z">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="transferAction:" destination="Aqg-bU-hze" id="fSx-vw-nua"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>

@@ -12,5 +12,5 @@ protocol TransactionView : class {
     
     func showLoading()
     func hideLoading()
-    func showAlert(with error: String)
+    func showAlert(with message: String, title: String)
 }

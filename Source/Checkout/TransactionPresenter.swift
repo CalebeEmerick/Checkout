@@ -31,11 +31,11 @@ struct TransactionPresenter {
                     
                 case .success(let transaction):
                     self.transactionView.hideLoading()
-                    print(transaction)
+                    self.transactionView.showAlert(with: transaction.message, title: "Sucesso!")
                     
                 case .failure(let error):
                     self.transactionView.hideLoading()
-                    self.transactionView.showAlert(with: error)
+                    self.transactionView.showAlert(with: error, title: "Oops!")
                 }
             }
         }

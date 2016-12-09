@@ -23,7 +23,7 @@ struct StoreService : StoreServiceProtocol {
         
         let url = "\(baseURL)/\(customerKey)/merchants"
         
-        Just.get(url) { result in
+        Just.get(url, timeout: 60) { result in
             
             guard let code = result.statusCode else {
                 return completion(.failure(Message.generalError)) }

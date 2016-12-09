@@ -51,4 +51,27 @@ struct TransactionLayout : LayoutProtocol {
         constraints.forEach { $0.constant = size }
         UIView.animate(withDuration: 0.3) { view.layoutIfNeeded() }
     }
+    
+    func shakeAnimation<T: UIView>(for view: T) where T : Reusable {
+        
+        let animation = CABasicAnimation(keyPath: "position")
+        
+        animation.duration = 0.05
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 6, y: view.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 6, y: view.center.y))
+        
+        view.layer.add(animation, forKey: "position")
+        
+//        let animation = CABasicAnimation(keyPath: T.identifier)
+//        
+//        animation.duration = 0.05
+//        animation.repeatCount = 4
+//        animation.autoreverses = true
+//        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 5, y: view.center.y))
+//        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 5, y: view.center.y))
+//        
+//        view.layer.add(animation, forKey: T.identifier)
+    }
 }

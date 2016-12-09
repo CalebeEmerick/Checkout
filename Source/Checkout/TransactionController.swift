@@ -25,6 +25,7 @@ final class TransactionController : UITableViewController {
     @IBOutlet fileprivate weak var buttonTrailingConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var makeTransactionButton: UIButton!
     
+    @IBAction private func transferAction(_ sender: UIBarButtonItem) { makeTransactionRequest() }
     @IBAction private func makeTransaction(_ sender: UIButton) { makeTransactionRequest() }
     
     fileprivate let datePicker = DatePicker.makeXib()
@@ -81,17 +82,49 @@ extension TransactionController {
     
     fileprivate func makeTransactionRequest() {
         
-        guard let store = store else { return }
-        guard let brand = creditCardBrand else { return }
-        guard let number = cardNumber.text else { return }
-        guard let name = cardName.text else { return }
-        guard let securityCodeString = cardSecurityCode.text,
-            let secutiryCode = Int(securityCodeString) else { return }
-        guard let fullName = fullName.text else { return }
-        guard let email = email.text else { return }
-        guard let amountString = transactionValue.text else { return }
-        let amount = convertToCents(from: amountString)
+        guard let store = store else {
+            showAlert(with: Message.generalError, title: "Oops!")
+            return
+        }
+        guard let brand = creditCardBrand else {
+            
+            layout.shakeAnimation(for: collectionView)
+            return
+        }
+        guard let number = cardNumber.text, !number.isEmpty else {
+            layout.shakeAnimation(for: cardNumber)
+            return
+        }
+        guard let name = cardName.text, !name.isEmpty else {
+            layout.shakeAnimation(for: cardName)
+            return
+        }
+        guard let validate = cardValidate.text, !validate.isEmpty else {
+            layout.shakeAnimation(for: cardValidate)
+            return
+        }
+        guard
+            let securityCodeString = cardSecurityCode.text,
+            let secutiryCode = Int(securityCodeString),
+            !securityCodeString.isEmpty
+        else {
+                layout.shakeAnimation(for: cardSecurityCode)
+                return
+        }
+        guard let amountString = transactionValue.text, !amountString.isEmpty else {
+            layout.shakeAnimation(for: transactionValue)
+            return
+        }
+        guard let fullName = fullName.text, !fullName.isEmpty else {
+            layout.shakeAnimation(for: self.fullName)
+            return
+        }
+        guard let email = email.text, !email.isEmpty else {
+            layout.shakeAnimation(for: self.email)
+            return
+        }
         
+        let amount = convertToCents(from: amountString)
         let valityDate = ValityDate(month: datePicker.delegate.apiSelectedMonth, year: datePicker.delegate.apiSelectedYear)
         let creditCard = CreditCard(brand: brand, number: number, name: name, valityDate: valityDate, securityCode: secutiryCode)
         let person = Person(name: fullName, email: email)
@@ -177,8 +210,8 @@ extension TransactionController : TransactionView {
         activityIndicator.stopAnimating()
     }
     
-    func showAlert(with error: String) {
+    func showAlert(with message: String, title: String) {
         
-        layout.showAlert(for: self, with: error, title: "Oops!")
+        layout.showAlert(for: self, with: message, title: title)
     }
 }

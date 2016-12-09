@@ -22,7 +22,7 @@ struct LoginService : LoginServiceProtocol {
         let url = "\(baseURL)/users/accesstokens"
         let parameters = makeParametersFrom(username: username, password: password)
         
-        Just.post(url, params: parameters, headers: defaultJSONHeader) { result in
+        Just.post(url, params: parameters, headers: defaultJSONHeader, timeout: 60) { result in
             
             guard let code = result.statusCode else {
                 return completion(.failure(Message.generalError)) }
