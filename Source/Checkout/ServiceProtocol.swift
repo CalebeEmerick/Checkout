@@ -10,6 +10,9 @@ import Foundation
 
 protocol ServiceProtocol {
     
+    var baseURL: String { get }
+    var defaultJSONHeader: [String: String] { get }
+    func getErrorMessage(from json: JSON) -> String
 }
 
 extension ServiceProtocol {

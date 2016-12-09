@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct LoginLayout {
+struct LoginLayout : LayoutProtocol {
     
     func makeBackgroundGradient(for view: UIView) {
 
@@ -36,14 +36,5 @@ struct LoginLayout {
     func makePasswordTextFieldFirstResponder(_ textField: UITextField) {
 
         textField.becomeFirstResponder()
-    }
-
-    func showAlert(for controller: UIViewController, with message: String) {
-
-        let alert = UIAlertController(title: "Ops!", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        alert.addAction(okAction)
-        controller.present(alert, animated: true, completion: nil)
     }
 }

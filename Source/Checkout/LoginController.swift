@@ -147,7 +147,7 @@ extension LoginController : LoginView {
     
     func showErrorAlert(_ error: String) {
         
-        layout?.showAlert(for: self, with: error)
+        layout?.showAlert(for: self, with: error, title: "Oops!")
     }
     
     func shouldEnableLoginButton() {

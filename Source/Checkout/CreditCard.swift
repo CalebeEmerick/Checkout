@@ -13,6 +13,6 @@ struct CreditCard {
     let brand: CreditCardBrand
     let number: String
     let name: String
-    let expiryDate: String
+    let valityDate: ValityDate
     let securityCode: Int
 }

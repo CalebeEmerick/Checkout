@@ -12,4 +12,5 @@ struct Transaction {
     
     let creditCard: CreditCard
     let person: Person
+    let amount: Int64
 }

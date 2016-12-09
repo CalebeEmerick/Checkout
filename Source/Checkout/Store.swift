@@ -25,7 +25,6 @@ extension Store : JSONDecodable {
     init?(json: JSON) {
         
         guard
-            let merchantKey = json["merchantKey"] as? String,
             let publicMerchantKey = json["publicMerchantKey"] as? String,
             let merchantName = json["merchantName"] as? String,
             let documentNumber = json["documentNumber"] as? String,
@@ -34,7 +33,7 @@ extension Store : JSONDecodable {
             let merchantStatus = json["merchantStatus"] as? String
         else { return nil }
         
-        self.merchantKey = merchantKey
+        self.merchantKey = "85328786-8ba6-420f-9948-5352f5a183eb"
         self.publicMerchantKey = publicMerchantKey
         self.merchantName = merchantName
         self.documentNumber = documentNumber

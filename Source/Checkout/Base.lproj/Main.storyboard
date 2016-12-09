@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Aqg-bU-hze">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16C48b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="giz-gD-nc6">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -286,7 +286,7 @@
                             <tableViewSection headerTitle="Cartão de Crédito" id="1Je-fn-chQ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="389" id="poA-9y-Utb">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="389"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poA-9y-Utb" id="cIE-Uy-451">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
@@ -367,7 +367,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV é o código de segurança impresso no verso do seu cartão de crédito com 3 dígitos." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cij-2G-72C">
-                                                    <rect key="frame" x="15" y="291" width="290" height="26.5"/>
+                                                    <rect key="frame" x="15" y="291" width="285" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -387,7 +387,7 @@
                                                 <constraint firstItem="bnT-Jb-eX1" firstAttribute="leading" secondItem="cIE-Uy-451" secondAttribute="leading" constant="15" id="TWR-hY-E5v"/>
                                                 <constraint firstItem="Cij-2G-72C" firstAttribute="top" secondItem="kBj-jw-kYa" secondAttribute="bottom" constant="8" id="X4h-z1-yQX"/>
                                                 <constraint firstItem="DnG-UI-PeZ" firstAttribute="trailing" secondItem="z3c-EQ-U2x" secondAttribute="trailing" id="Y2x-Nl-b7X"/>
-                                                <constraint firstItem="Cij-2G-72C" firstAttribute="trailing" secondItem="kBj-jw-kYa" secondAttribute="trailing" id="al0-ZT-06u"/>
+                                                <constraint firstItem="Cij-2G-72C" firstAttribute="trailing" secondItem="kBj-jw-kYa" secondAttribute="trailing" constant="-5" id="al0-ZT-06u"/>
                                                 <constraint firstItem="PJF-TW-nyP" firstAttribute="leading" secondItem="rMc-Tl-xci" secondAttribute="leading" id="bIY-8J-BZi"/>
                                                 <constraint firstItem="KHT-Fo-G9Y" firstAttribute="height" secondItem="DnG-UI-PeZ" secondAttribute="height" id="dqn-vE-k15"/>
                                                 <constraint firstItem="fNC-dA-kZW" firstAttribute="trailing" secondItem="kBj-jw-kYa" secondAttribute="trailing" id="ekY-g8-R5S"/>
@@ -411,7 +411,7 @@
                             <tableViewSection headerTitle="Dados Pessoais" id="E3H-m0-TWm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="Y3m-q3-9xW">
-                                        <rect key="frame" x="0.0" y="492" width="320" height="131"/>
+                                        <rect key="frame" x="0.0" y="490.5" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y3m-q3-9xW" id="o72-GL-4JK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
@@ -455,7 +455,7 @@
                             <tableViewSection id="zEv-0i-QPQ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="65" id="K8D-DY-cGP">
-                                        <rect key="frame" x="0.0" y="671" width="320" height="65"/>
+                                        <rect key="frame" x="0.0" y="669.5" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8D-DY-cGP" id="ZTR-DO-AkE">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
@@ -467,6 +467,9 @@
                                                         <constraint firstAttribute="height" constant="44" id="ay7-5x-EdI"/>
                                                     </constraints>
                                                     <state key="normal" title="Efetuar Transação" backgroundImage="blue-background"/>
+                                                    <connections>
+                                                        <action selector="makeTransaction:" destination="Aqg-bU-hze" eventType="touchUpInside" id="kZ3-yQ-Dzv"/>
+                                                    </connections>
                                                 </button>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="65c-RG-VGy">
                                                     <rect key="frame" x="150" y="22" width="20" height="20"/>
@@ -504,6 +507,7 @@
                         <outlet property="collectionView" destination="z3c-EQ-U2x" id="AYh-xk-yWJ"/>
                         <outlet property="email" destination="GlN-ZA-NUj" id="i8b-LO-0Zc"/>
                         <outlet property="fullName" destination="cb5-gJ-ILV" id="1Wk-gx-jYH"/>
+                        <outlet property="makeTransactionButton" destination="qnC-99-b3A" id="yby-9i-pfZ"/>
                         <outlet property="transactionValue" destination="fNC-dA-kZW" id="Qh9-Bl-wpo"/>
                     </connections>
                 </tableViewController>
